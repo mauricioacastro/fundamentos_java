@@ -16,10 +16,10 @@ public class mauriciocastroTP1 {
 	private static void imprimir(int indice) {
 		float mediaNota = calcularAvaliacao(indice);
 		
-		System.out.println("<"+indice+"> " + 
-							nomes[indice] + " * " + 
-							mediaNota + " * " +
-							obterSituacao(mediaNota)
+		System.out.println("Aluno indice <"+indice+"> " + 
+							" - Nome do aluno: " + nomes[indice]  + 
+							" - Nota media: " + mediaNota  +
+							" - Situacao: " + obterSituacao(mediaNota)
 							);
 	}
 	
@@ -49,9 +49,9 @@ public class mauriciocastroTP1 {
 		int pos = 0;
 
 		do {
-			System.out.println("[1] Cadastrar");
-			System.out.println("[2] Consultar um");
-			System.out.println("[3] Consultar todos");
+			System.out.println("[1] Cadastrar um aluno");
+			System.out.println("[2] Consultar um aluno");
+			System.out.println("[3] Consultar todos alunos");
 			System.out.println("[4] Sair");
 			System.out.print("Informe a opcao desejada: ");						
 			opcao = in.next();
