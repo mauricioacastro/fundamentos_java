@@ -4,9 +4,7 @@ public class mauriciocastroTP1 {
 
 	private static String[] nomes;
 	private static float[] nota1, nota2;
-
 	private static final int TAMANHO = 100; 		
-
 	private static void imprimir() {		
 		for (int i = 0; i < TAMANHO; i++) {
 			if(nomes[i] != null) {
@@ -45,10 +43,8 @@ public class mauriciocastroTP1 {
 		nota1 = new float[TAMANHO];
 		nota2 = new float[TAMANHO];
 		
-
 		// Locale.setDefault(Locale.US);
-		Scanner in = new Scanner(System.in);
-		
+		Scanner in = new Scanner(System.in);		
 		String opcao;
 		int pos = 0;
 
@@ -57,7 +53,6 @@ public class mauriciocastroTP1 {
 			System.out.println("[2] Consultar um");
 			System.out.println("[3] Consultar todos");
 			System.out.println("[4] Sair");
-			
 			System.out.print("Informe a opcao desejada: ");						
 			opcao = in.next();
 			
