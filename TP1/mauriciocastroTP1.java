@@ -1,3 +1,4 @@
+// import java.util.Locale;
 import java.util.Scanner;
 
 public class mauriciocastroTP1 {
@@ -16,7 +17,7 @@ public class mauriciocastroTP1 {
 	private static void imprimir(int indice) {
 		float mediaNota = calcularAvaliacao(indice);
 		
-		System.out.println("Aluno indice <"+indice+"> " + 
+		System.out.println("Aluno indice <"+indice+">" + 
 							" - Nome do aluno: " + nomes[indice]  + 
 							" - Nota media: " + mediaNota  +
 							" - Situacao: " + obterSituacao(mediaNota)
