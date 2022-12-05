@@ -1,7 +1,8 @@
 package br.edu.infnet.appcommerce.model.tests;
 
-public class ClienteTests {
+public class EletronicoTest {
 	public static void main(String[] args) {
+		
 		
 	}
 }
