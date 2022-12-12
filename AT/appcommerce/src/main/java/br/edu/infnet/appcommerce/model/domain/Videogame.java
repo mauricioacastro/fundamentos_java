@@ -14,13 +14,14 @@ public class Videogame extends Eletronico {
 	public Videogame(String codigo, String nome, float valor, String marca, String processador, int memoriaram) throws ValorZeradoException {
 		super(codigo, nome, valor);
 		this.marca = marca;
+		this.processador = processador;
 	}
 
 
 	@Override
 	public float calcularValorVenda() throws ArmazenamentoInformaticaInvalidoException {
 		
-		if(armazenamento < 128) {
+		if(armazenamento < 64) {
 			throw new ArmazenamentoInformaticaInvalidoException("O armazenamento do Videogame está inválido!");
 		}
 		
@@ -70,6 +71,9 @@ public class Videogame extends Eletronico {
 	}
 	public String getMemoriaram() {
 		return marca;
+	}
+	public void setMemoriaram(int memoriaram) {
+		this.memoriaram = memoriaram;
 	}
 
 }

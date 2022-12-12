@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.infnet.appcommerce.model.domain.Informatica;
+import br.edu.infnet.appcommerce.model.domain.Smartphone;
+import br.edu.infnet.appcommerce.model.domain.Videogame;
 import br.edu.infnet.appcommerce.model.domain.Remessa;
 import br.edu.infnet.appcommerce.model.domain.Eletronico;
 import br.edu.infnet.appcommerce.model.domain.Cliente;
@@ -21,7 +23,7 @@ public class RemessaTest {
 		List<Eletronico> eletronicosR4 = new ArrayList<Eletronico>();
 
 		try {
-			Informatica i1 = new Informatica("i1Del5", "Dell", 5, "Dell");
+			Informatica i1 = new Informatica("i1Del5", "Inspiron 15", 5, "Dell");
 			i1.setSsd(false);
 			i1.setArmazenamento(500);
 
@@ -33,7 +35,7 @@ public class RemessaTest {
 		}
 
 		try {
-			Informatica i2 = new Informatica("i2apr10", "Apple", 10, "Apple");
+			Informatica i2 = new Informatica("i2apr10", "Macbook Air", 10, "Apple");
 			i2.setSsd(true);
 			i2.setArmazenamento(300);
 
@@ -55,6 +57,29 @@ public class RemessaTest {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
+		try {
+			Smartphone s1 = new Smartphone("s1iph5", "iPhone 14", 5000, "Apple", "A14", 8);
+			s1.setEsim(true);
+			s1.setArmazenamento(128);
+
+			eletronicosR3.add(s1);
+			eletronicosR4.add(s1);
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
+		try {
+			Videogame v1 = new Videogame("v1pla5", "Play 5", 4500, "Sony", "Zen 2", 0);
+			v1.setLeitordisco(true);
+			v1.setArmazenamento(128);
+			v1.setMemoriaram(16);
+
+			eletronicosR1.add(v1);
+			eletronicosR4.add(v1);
+		} catch (ValorZeradoException e) {
+			System.out.println("[ERRO] " + e.getMessage());
+		}
+		
 		try {
 			Remessa r1 = new Remessa(new Cliente("maria", "12312312312", "maria@maria.com"), eletronicosR1);
 			r1.setDescricao("Primeira remessa");

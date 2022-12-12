@@ -9,7 +9,7 @@ public class InformaticaTest {
 	public static void main(String[] args) {
 				
 		try {
-			Informatica i1 = new Informatica("i1Del5", "Dell", 5, "Dell");
+			Informatica i1 = new Informatica("i1Del5", "Inspiron", 3000, "Dell");
 			i1.setSsd(false);
 			i1.setArmazenamento(500);
 			System.out.println(i1);
@@ -19,7 +19,7 @@ public class InformaticaTest {
 		}
 
 		try {
-			Informatica i1 = new Informatica("i1Del5", "Dell", 5, "Dell");
+			Informatica i1 = new Informatica("i1Del5", "Inspiron", 3000, "Dell");
 			i1.setSsd(false);
 			i1.setArmazenamento(60);
 			System.out.println(i1);
@@ -29,7 +29,7 @@ public class InformaticaTest {
 		}
 
 		try {
-			Informatica i2 = new Informatica("i2apr10", "Apple", 10, "Apple");
+			Informatica i2 = new Informatica("i2apr10", "Macbook", 10000, "Apple");
 			i2.setSsd(true);
 			i2.setArmazenamento(120);
 			System.out.println(i2);
@@ -39,7 +39,7 @@ public class InformaticaTest {
 		}
 
 		try {
-			Informatica i3 = new Informatica("i3pec8", "Pecas", 8, "Pecas");
+			Informatica i3 = new Informatica("i3pec8", "Pecas", 500, "Diversas");
 			i3.setSsd(true);
 			i3.setArmazenamento(1000);
 			System.out.println(i3);

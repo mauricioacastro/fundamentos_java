@@ -1,11 +1,9 @@
-P;Pedido 1;false;123123123123;elberth@elberth.com;elberth;
-B;123;Energ;10;true;power;500
-C;234;pf;20;arroz, feijao;200;false
-B;234;Coooooffff;5;false;cafezin;100
-S;234;Coooooffff;5;false;cafezin;100
-C;345;filezin;30;peixe com pure;300;true
-B;345;Chope;100;true;brahma;1000
-B;345;Chope;100;true;brahma;25
-S;456;churras;40;churrasquinho;400;false
-C;456;churras;40;churrasquinho;400;false
-C;456;churras;40;churrasquinho;-10;false
+R;Remessa 1;true;123123123123;jose@jose.com.br;jose;
+I;i1Del5;Inspiron;3000.0;ssd=N;500;Dell;
+I;i1Del5;Inspiron;3000.0;ssd=N;500;Dell;
+I;i2apr10;Macbook;10000.0;ssd=N;500;Apple;
+I;i1Del5;Inspiron;3000.0;ssd=N;500;Dell;
+I;i1Del5;Inspiron;3000.0;ssd=N;500;Dell;
+I;i2apr10;Macbook;10000.0;ssd=N;500;Apple;
+S;s1iph5;iPhone 14;5000.0;esim=S;128;Apple;A14;8
+V;v1pla5;Play 5;4500.0;leitordisco=S;825;Sony;Zen 2;16

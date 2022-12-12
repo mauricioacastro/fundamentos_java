@@ -9,11 +9,12 @@ public class Smartphone extends Eletronico {
 	private String processador;
 	private int memoriaram;
 	private int armazenamento;
-	private boolean esim;  //esim
+	private boolean esim;
 
 	public Smartphone(String codigo, String nome, float valor, String marca, String processador, int memoriaram) throws ValorZeradoException {
 		super(codigo, nome, valor);
 		this.marca = marca;
+		this.processador = processador;
 	}
 
 
@@ -70,6 +71,10 @@ public class Smartphone extends Eletronico {
 	}
 	public int getMemoriaram() {
 		return memoriaram;
+	}
+	
+	public void setMemoriaram(int memoriaram) {
+		this.memoriaram = memoriaram;
 	}
 
 }

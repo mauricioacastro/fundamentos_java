@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.infnet.appcommerce.model.domain.Informatica;
+import br.edu.infnet.appcommerce.model.domain.Smartphone;
+import br.edu.infnet.appcommerce.model.domain.Videogame;
 import br.edu.infnet.appcommerce.model.domain.Remessa;
 import br.edu.infnet.appcommerce.model.domain.Eletronico;
 import br.edu.infnet.appcommerce.model.domain.Cliente;
@@ -42,7 +44,7 @@ public class ArquivoTest {
 					campos = linha.split(";");
 					
 					switch (campos[0].toUpperCase()) {
-					case "P":					
+					case "R":					
 						try {						
 							remessa = new Remessa(new Cliente(campos[5], campos[3], campos[4]), eletronicos);
 							remessa.setDescricao(campos[1]);
@@ -51,12 +53,11 @@ public class ArquivoTest {
 							System.out.println("[ERRO] " + e.getMessage());
 						}
 
-						break;
-					case "B":					
+	 					break;
+					case "I":					
 						try {
 							Informatica informatica = new Informatica(campos[1], campos[2], Float.valueOf(campos[3]), campos[5]);
-							informatica.setSsd(Boolean.valueOf(campos[4]));
-							informatica.setArmazenamento(Integer.valueOf(campos[6]));
+							informatica.setSsd(Boolean.valueOf(campos[3]));
 
 							eletronicos.add(informatica);
 						} catch (ValorZeradoException e) {
@@ -64,9 +65,28 @@ public class ArquivoTest {
 						}
 
 						break;
-					case "C":					
+					case "S":
+						try {
+							Smartphone smartphone = new Smartphone(campos[1], campos[2], Float.valueOf(campos[3]), null, null, 0);
+							smartphone.setEsim(Boolean.valueOf(campos[3]));
+
+							eletronicos.add(smartphone);
+						} catch (ValorZeradoException e) {
+							System.out.println("[ERRO] " + e.getMessage());
+						}
+
 						break;
-					case "S":					
+					case "V":		
+						try {
+							Videogame videogame = new Videogame(campos[1], campos[2], Float.valueOf(campos[3]), null, null, 0);
+							videogame.setLeitordisco(Boolean.valueOf(campos[3]));
+
+							eletronicos.add(videogame);
+						} catch (ValorZeradoException e) {
+							System.out.println("[ERRO] " + e.getMessage());
+						}
+
+						
 						break;
 
 					default:
