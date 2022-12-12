@@ -8,29 +8,29 @@ public class ClienteTest {
 	public static void main(String[] args) {
 
 		try {
-			Cliente s1 = new Cliente("huguinho", "12312312312", "hugo@hugo.com");
-			System.out.println(s1);
+			Cliente c1 = new Cliente("maria", "12312312312", "maria@maria.com");
+			System.out.println(c1);
 		} catch (ClienteInvalidoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Cliente s2 = new Cliente(null, "12312312312", "ze@ze.com");
-			System.out.println(s2);
+			Cliente c2 = new Cliente(null, "12312312312", "null@null.com");
+			System.out.println(c2);
 		} catch (ClienteInvalidoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Cliente s3 = new Cliente("luizinho", null, "luiz@luiz.com");
-			System.out.println(s3);
+			Cliente c3 = new Cliente("jose", null, "jose@jose.com");
+			System.out.println(c3);
 		} catch (ClienteInvalidoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Cliente s3 = new Cliente("luizinho", "12312312312", null);
-			System.out.println(s3);
+			Cliente c3 = new Cliente("joao", "12312312312", null);
+			System.out.println(c3);
 		} catch (ClienteInvalidoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}

@@ -1,6 +1,6 @@
 package br.edu.infnet.appcommerce.model.domain;
 
-import br.edu.infnet.appcommerce.model.exceptions.TamanhoInformaticaInvalidoException;
+import br.edu.infnet.appcommerce.model.exceptions.ArmazenamentoInformaticaInvalidoException;
 import br.edu.infnet.appcommerce.model.exceptions.ValorZeradoException;
 
 public abstract class Eletronico {
@@ -24,7 +24,7 @@ public abstract class Eletronico {
 		this.valor = valor;
 	}
 	
-	public abstract float calcularValorVenda() throws TamanhoInformaticaInvalidoException;
+	public abstract float calcularValorVenda() throws ArmazenamentoInformaticaInvalidoException;
 
 	@Override
 	public String toString() {

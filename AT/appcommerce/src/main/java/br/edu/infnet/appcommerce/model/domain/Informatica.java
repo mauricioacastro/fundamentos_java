@@ -1,12 +1,12 @@
 package br.edu.infnet.appcommerce.model.domain;
 
-import br.edu.infnet.appcommerce.model.exceptions.TamanhoInformaticaInvalidoException;
+import br.edu.infnet.appcommerce.model.exceptions.ArmazenamentoInformaticaInvalidoException;
 import br.edu.infnet.appcommerce.model.exceptions.ValorZeradoException;
 
 public class Informatica extends Eletronico {
 
-	private boolean gelada;
-	private int tamanho;
+	private boolean ssd;
+	private int armazenamento;
 	private String marca;
 
 	public Informatica(String codigo, String nome, float valor, String marca) throws ValorZeradoException {
@@ -15,13 +15,13 @@ public class Informatica extends Eletronico {
 	}
 
 	@Override
-	public float calcularValorVenda() throws TamanhoInformaticaInvalidoException {
+	public float calcularValorVenda() throws ArmazenamentoInformaticaInvalidoException {
 		
-		if(tamanho < 300) {
-			throw new TamanhoInformaticaInvalidoException("O tamanho da informatica está inválido!");
+		if(armazenamento < 120) {
+			throw new ArmazenamentoInformaticaInvalidoException("O armazenamento da Informatica está inválido!");
 		}
 		
-		return this.getValor() + (gelada ? 3 : 0) + tamanho * 0.05f;
+		return this.getValor() + (ssd ? 3 : 0) + armazenamento * 0.05f;
 	}
 	
 	@Override
@@ -30,26 +30,26 @@ public class Informatica extends Eletronico {
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append(";");
-		sb.append(gelada ? "gelada=S" : "gelada=N");
+		sb.append(ssd ? "ssd=S" : "ssd=N");
 		sb.append(";");
-		sb.append(tamanho);
+		sb.append(armazenamento);
 		sb.append(";");
 		sb.append(marca);
 
 		return sb.toString();
 	}
 	
-	public boolean isGelada() {
-		return gelada;
+	public boolean isSsd() {
+		return ssd;
 	}
-	public void setGelada(boolean gelada) {
-		this.gelada = gelada;
+	public void setSsd(boolean ssd) {
+		this.ssd = ssd;
 	}
-	public int getTamanho() {
-		return tamanho;
+	public int getArmazenamento() {
+		return armazenamento;
 	}
-	public void setTamanho(int tamanho) {
-		this.tamanho = tamanho;
+	public void setArmazenamento(int armazenamento) {
+		this.armazenamento = armazenamento;
 	}
 	public String getMarca() {
 		return marca;

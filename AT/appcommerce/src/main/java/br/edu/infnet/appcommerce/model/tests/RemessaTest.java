@@ -15,98 +15,98 @@ import br.edu.infnet.appcommerce.model.exceptions.ValorZeradoException;
 public class RemessaTest {
 
 	public static void main(String[] args) {
-		List<Eletronico> eletronicosP1 = new ArrayList<Eletronico>();
-		List<Eletronico> eletronicosP2 = new ArrayList<Eletronico>();
-		List<Eletronico> eletronicosP3 = new ArrayList<Eletronico>();
-		List<Eletronico> eletronicosP4 = new ArrayList<Eletronico>();
+		List<Eletronico> eletronicosR1 = new ArrayList<Eletronico>();
+		List<Eletronico> eletronicosR2 = new ArrayList<Eletronico>();
+		List<Eletronico> eletronicosR3 = new ArrayList<Eletronico>();
+		List<Eletronico> eletronicosR4 = new ArrayList<Eletronico>();
 
 		try {
-			Informatica b1 = new Informatica("b1caf5", "cafezin", 5, "Cooooffeeee");
-			b1.setGelada(false);
-			b1.setTamanho(500);
+			Informatica i1 = new Informatica("i1Del5", "Dell", 5, "Dell");
+			i1.setSsd(false);
+			i1.setArmazenamento(500);
 
-			eletronicosP1.add(b1);
-			eletronicosP2.add(b1);
-			eletronicosP4.add(b1);
+			eletronicosR1.add(i1);
+			eletronicosR2.add(i1);
+			eletronicosR4.add(i1);
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Informatica b2 = new Informatica("b2cho10", "chopin", 10, "Brahhh");
-			b2.setGelada(true);
-			b2.setTamanho(300);
+			Informatica i2 = new Informatica("i2apr10", "Apple", 10, "Apple");
+			i2.setSsd(true);
+			i2.setArmazenamento(300);
 
-			eletronicosP2.add(b2);
-			eletronicosP3.add(b2);
-			eletronicosP4.add(b2);
+			eletronicosR2.add(i2);
+			eletronicosR3.add(i2);
+			eletronicosR4.add(i2);
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Informatica b3 = new Informatica("b3suc8", "Suquin", 8, "Dafruta");
-			b3.setGelada(true);
-			b3.setTamanho(1000);
+			Informatica i3 = new Informatica("i3pec8", "Pecas", 8, "Pecas");
+			i3.setSsd(true);
+			i3.setArmazenamento(1000);
 
-			eletronicosP3.add(b3);
-			eletronicosP4.add(b3);
+			eletronicosR3.add(i3);
+			eletronicosR4.add(i3);
 		} catch (ValorZeradoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Remessa p1 = new Remessa(new Cliente("huguinho", "12312312312", "hugo@hugo.com"), eletronicosP1);
-			p1.setDescricao("Primeiro remessa");
-			p1.setWeb(false);
-			p1.imprimir();
+			Remessa r1 = new Remessa(new Cliente("maria", "12312312312", "maria@maria.com"), eletronicosR1);
+			r1.setDescricao("Primeira remessa");
+			r1.setWeb(false);
+			r1.imprimir();
 		} catch (ClienteInvalidoException | RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Remessa p2 = new Remessa(new Cliente("zezinho", "12312312312", "ze@ze.com"), eletronicosP2);
-			p2.setDescricao("Segundo remessa");
-			p2.setWeb(true);
-			p2.imprimir();
+			Remessa r2 = new Remessa(new Cliente("jose", "12312312312", "jose@jose.com"), eletronicosR2);
+			r2.setDescricao("Segunda remessa");
+			r2.setWeb(true);
+			r2.imprimir();
 		} catch (ClienteInvalidoException | RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Remessa p3 = new Remessa(new Cliente("luizinho", "12312312312", "luiz@luiz.com"), eletronicosP3);
-			p3.setDescricao("Terceiro remessa");
-			p3.setWeb(true);
-			p3.imprimir();
+			Remessa r3 = new Remessa(new Cliente("joao", "12312312312", "joao@joao.com"), eletronicosR3);
+			r3.setDescricao("Terceira remessa");
+			r3.setWeb(true);
+			r3.imprimir();
 		} catch (ClienteInvalidoException | RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Remessa p4 = new Remessa(new Cliente("mariazinha", "12312312312", "maria@maria.com"), eletronicosP4);
-			p4.setDescricao("Quarto remessa");
-			p4.setWeb(true);
-			p4.imprimir();
+			Remessa r4 = new Remessa(new Cliente("roberto", "12312312312", "roberto@roberto.com"), eletronicosR4);
+			r4.setDescricao("Quarta remessa");
+			r4.setWeb(true);
+			r4.imprimir();
 		} catch (ClienteInvalidoException | RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Remessa p5 = new Remessa(null, eletronicosP4);
-			p5.setDescricao("Quinto remessa");
-			p5.setWeb(true);
-			p5.imprimir();
+			Remessa r5 = new Remessa(null, eletronicosR4);
+			r5.setDescricao("Quinta remessa");
+			r5.setWeb(true);
+			r5.imprimir();
 		} catch (RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}
 
 		try {
-			Cliente s6 = new Cliente("mariazinha", "12312312312", "maria@maria.com");
+			Cliente c6 = new Cliente("roberto", "12312312312", "roberto@roberto.com");
 		
-			Remessa p6 = new Remessa(s6, null);
-			p6.setDescricao("Sexto remessa");
-			p6.setWeb(true);
-			p6.imprimir();
+			Remessa r6 = new Remessa(c6, null);
+			r6.setDescricao("Sexta remessa");
+			r6.setWeb(true);
+			r6.imprimir();
 		} catch (ClienteInvalidoException | RemessaSemClienteException | RemessaSemEletronicoException e) {
 			System.out.println("[ERRO] " + e.getMessage());
 		}

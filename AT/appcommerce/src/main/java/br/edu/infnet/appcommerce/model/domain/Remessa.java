@@ -42,7 +42,7 @@ public class Remessa {
 	}
 	
 	public String obterLinha() {	
-		DateTimeFormatter formato = DateTimeFormatter.ofPattern("MM/yyyy");
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		return this.getData().format(formato)+";"+
 			   this.getDescricao()+";"+

@@ -55,8 +55,8 @@ public class ArquivoTest {
 					case "B":					
 						try {
 							Informatica informatica = new Informatica(campos[1], campos[2], Float.valueOf(campos[3]), campos[5]);
-							informatica.setGelada(Boolean.valueOf(campos[4]));
-							informatica.setTamanho(Integer.valueOf(campos[6]));
+							informatica.setSsd(Boolean.valueOf(campos[4]));
+							informatica.setArmazenamento(Integer.valueOf(campos[6]));
 
 							eletronicos.add(informatica);
 						} catch (ValorZeradoException e) {
